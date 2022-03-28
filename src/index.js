@@ -14,22 +14,23 @@ const { MenuAPI } = require('./routes/menu.routes');
 const { FactCabAPI } = require('./routes/factcab.routes');
 const { FactDetAPI } = require('./routes/factdet.routes');
 const app = express();
-const router = express.Router(); // correccion de bug
+//const router = express.Router(); // correccion de bug
 
 // Crea y conecta la BD segun lo determinado en config/db.js
 sequelize.sync().then(() => console.log("Created and connected successfully"));
 
 // correccion de bug
-router.get('/', function(req, res) {  
+/*router.get('/', function(req, res) {  
     res.status(200).send("Aqui comienza el API");
-});
+});*/
 
 // FUNDAMENTAL: uso del Express
-//app.use(express.json());
-app.use('/', router);
+app.use(express.json());
+//app.use('/', router);
 
 // llamado de las APIS definidas en el ruteo
-//ItemRestAPI(app);
+IndexAPI(app);
+ItemRestAPI(app);
 UsuariosAPI(app);
 MesaAPI(app);
 MeseroAPI(app);

@@ -1,0 +1,37 @@
+Enlaces:
+
+Default host: localhost:3001
+
+Item de restaurante
+
+GET, POST: {HOST}/api/itemrestaurante
+GET, PUT, DELETE: {HOST}/api/itemrestaurante/id
+
+Usuario
+
+GET, POST: {HOST}/api/usuario
+GET, PUT, DELETE: {HOST}/api/usuario/id
+
+Mesero
+
+GET, POST: {HOST}/api/mesero
+GET, PUT, DELETE: {HOST}/api/mesero/id
+
+Mesa
+
+GET, POST: {HOST}/api/mesa
+GET, PUT, DELETE: {HOST}/api/mesa/id
+
+Menú
+
+GET, POST: {HOST}/api/menu
+GET, PUT, DELETE: {HOST}/api/menu/id
+
+Factura
+
+GET, POST: {HOST}/api/fact_cab
+GET, PUT, DELETE: {HOST}/api/fact_cab/id
+
+GET, POST: {HOST}/api/fact_det
+GET, PUT, DELETE: {HOST}/api/fact_det/id
+

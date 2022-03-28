@@ -28,17 +28,6 @@ router.get('/', function(req, res) {
 //app.use(express.json());
 app.use('/', router);
 
-router
-    .route("/")
-    .get(ItemRestauranteController.getAll)
-    .post(ItemRestauranteController.create);
-  router
-    .route("/:id")
-    .get(ItemRestauranteController.getOne)
-    .put(ItemRestauranteController.updateOne)
-    .delete(ItemRestauranteController.deleteOne);
-app.use("/api/itemrestaurante", router);
-
 // llamado de las APIS definidas en el ruteo
 //ItemRestAPI(app);
 UsuariosAPI(app);

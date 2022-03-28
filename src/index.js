@@ -25,8 +25,8 @@ router.get('/', function(req, res) {
 });
 
 // FUNDAMENTAL: uso del Express
-//app.use(express.json());
-app.use('/', router);
+app.use(express.json());
+//app.use('/', router);
 
 // llamado de las APIS definidas en el ruteo
 ItemRestAPI(app);

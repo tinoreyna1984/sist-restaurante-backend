@@ -14,6 +14,6 @@ module.exports.MenuAPI = (app) => {
       .get(MenuController.getOne)
       .put(MenuController.updateOne)
       .delete(MenuController.deleteOne);
-    app.use("/api/menu", router);
+    app.use("/menu", router);
   };
   

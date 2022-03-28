@@ -14,6 +14,6 @@ module.exports.UsuariosAPI = (app) => {
       .get(UsuariosController.getOne)
       .put(UsuariosController.updateOne)
       .delete(UsuariosController.deleteOne);
-    app.use("/api/usuario", router);
+    app.use("/usuario", router);
   };
   

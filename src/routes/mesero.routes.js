@@ -14,6 +14,6 @@ module.exports.MeseroAPI = (app) => {
       .get(MeseroController.getOne)
       .put(MeseroController.updateOne)
       .delete(MeseroController.deleteOne);
-    app.use("/api/mesero", router);
+    app.use("/mesero", router);
   };
   

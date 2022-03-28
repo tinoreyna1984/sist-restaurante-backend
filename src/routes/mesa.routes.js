@@ -14,6 +14,6 @@ module.exports.MesaAPI = (app) => {
       .get(MesaController.getOne)
       .put(MesaController.updateOne)
       .delete(MesaController.deleteOne);
-    app.use("/api/mesa", router);
+    app.use("/mesa", router);
   };
   

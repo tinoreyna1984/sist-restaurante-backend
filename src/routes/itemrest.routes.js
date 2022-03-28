@@ -14,5 +14,5 @@ module.exports.ItemRestAPI = (app) => {
     .get(ItemRestauranteController.getOne)
     .put(ItemRestauranteController.updateOne)
     .delete(ItemRestauranteController.deleteOne);
-  app.use("/api/itemrestaurante", router);
+  app.use("/itemrestaurante", router);
 };

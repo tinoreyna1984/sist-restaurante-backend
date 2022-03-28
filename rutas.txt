@@ -1,6 +1,6 @@
 Enlaces:
 
-Default host: localhost:3001
+Default host: https://sist-restaurante-backend.herokuapp.com
 
 Item de restaurante
 

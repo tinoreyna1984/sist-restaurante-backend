@@ -25,11 +25,22 @@ router.get('/', function(req, res) {
 });
 
 // FUNDAMENTAL: uso del Express
-app.use(express.json());
-//app.use('/', router);
+//app.use(express.json());
+app.use('/', router);
+
+router
+    .route("/")
+    .get(ItemRestauranteController.getAll)
+    .post(ItemRestauranteController.create);
+  router
+    .route("/:id")
+    .get(ItemRestauranteController.getOne)
+    .put(ItemRestauranteController.updateOne)
+    .delete(ItemRestauranteController.deleteOne);
+app.use("/api/itemrestaurante", router);
 
 // llamado de las APIS definidas en el ruteo
-ItemRestAPI(app);
+//ItemRestAPI(app);
 UsuariosAPI(app);
 MesaAPI(app);
 MeseroAPI(app);

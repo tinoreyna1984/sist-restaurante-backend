@@ -31,6 +31,6 @@ FactCabAPI(app);
 FactDetAPI(app);
 
 // FUNDAMENTAL: dejar corriendo (listener) el app en el puerto configurado
-app.listen(Config.PORT || 3001, () => {
+app.listen(process.env.PORT || Config.PORT || 3001, () => {
     console.log(`Server started at port ${Config.PORT}`);
 });

@@ -14,6 +14,6 @@ module.exports.FactCabAPI = (app) => {
       .get(FactCabController.getOne)
       .put(FactCabController.updateOne)
       .delete(FactCabController.deleteOne);
-    app.use("/api/fact_cab", router);
+    app.use("/fact_cab", router);
   };
   

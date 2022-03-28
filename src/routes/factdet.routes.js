@@ -14,6 +14,6 @@ module.exports.FactDetAPI = (app) => {
       .get(FactDetController.getOne)
       .put(FactDetController.updateOne)
       .delete(FactDetController.deleteOne);
-    app.use("/api/fact_det", router);
+    app.use("/fact_det", router);
   };
   

@@ -4,34 +4,34 @@ Default host: localhost:3001
 
 Item de restaurante
 
-GET, POST: {HOST}/api/itemrestaurante
-GET, PUT, DELETE: {HOST}/api/itemrestaurante/id
+GET, POST: {HOST}/itemrestaurante
+GET, PUT, DELETE: {HOST}/itemrestaurante/id
 
 Usuario
 
-GET, POST: {HOST}/api/usuario
-GET, PUT, DELETE: {HOST}/api/usuario/id
+GET, POST: {HOST}/usuario
+GET, PUT, DELETE: {HOST}/usuario/id
 
 Mesero
 
-GET, POST: {HOST}/api/mesero
-GET, PUT, DELETE: {HOST}/api/mesero/id
+GET, POST: {HOST}/mesero
+GET, PUT, DELETE: {HOST}/mesero/id
 
 Mesa
 
-GET, POST: {HOST}/api/mesa
-GET, PUT, DELETE: {HOST}/api/mesa/id
+GET, POST: {HOST}/mesa
+GET, PUT, DELETE: {HOST}/mesa/id
 
 Menú
 
-GET, POST: {HOST}/api/menu
-GET, PUT, DELETE: {HOST}/api/menu/id
+GET, POST: {HOST}/menu
+GET, PUT, DELETE: {HOST}/menu/id
 
 Factura
 
-GET, POST: {HOST}/api/fact_cab
-GET, PUT, DELETE: {HOST}/api/fact_cab/id
+GET, POST: {HOST}/fact_cab
+GET, PUT, DELETE: {HOST}/fact_cab/id
 
-GET, POST: {HOST}/api/fact_det
-GET, PUT, DELETE: {HOST}/api/fact_det/id
+GET, POST: {HOST}/fact_det
+GET, PUT, DELETE: {HOST}/fact_det/id
 

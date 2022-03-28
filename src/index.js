@@ -6,6 +6,7 @@
 const express = require('express');
 const sequelize = require("./config/db");
 const { Config } = require('./config/config');
+const { IndexAPI } = require('./routes/index.routes');
 const { ItemRestAPI } = require('./routes/itemrest.routes');
 const { UsuariosAPI } = require('./routes/usuario.routes');
 const { MesaAPI } = require('./routes/mesa.routes');
@@ -39,6 +40,6 @@ FactCabAPI(app);
 FactDetAPI(app);
 
 // FUNDAMENTAL: dejar corriendo (listener) el app en el puerto configurado
-app.listen(process.env.PORT || 3000, () => {
+app.listen(Config.PORT || 3000, () => {
     console.log(`Server started at port ${process.env.PORT}`);
 });

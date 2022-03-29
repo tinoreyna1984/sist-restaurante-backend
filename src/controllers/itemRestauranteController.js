@@ -6,7 +6,8 @@ module.exports = {
   getAll: async (req, res) => {
     try {
       let items = await ItemRestaurante.findAll();
-      res.status(200).send("Menu items: " + JSON.stringify(items, null, 2));
+      //res.status(200).send("Menu items: " + JSON.stringify(items, null, 2));
+      res.json(items);
       console.debug("Menu items: " + JSON.stringify(items, null, 2));
     } catch (error) {
       console.error(error);

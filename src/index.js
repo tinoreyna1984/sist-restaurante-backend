@@ -5,6 +5,7 @@
 // FUNDAMENTAL: crear un app backend con Express
 const express = require('express');
 const sequelize = require("./config/db");
+const cors = require('cors');
 const { Config } = require('./config/config');
 const { IndexAPI } = require('./routes/index.routes');
 const { ItemRestAPI } = require('./routes/itemrest.routes');
@@ -15,10 +16,12 @@ const { MenuAPI } = require('./routes/menu.routes');
 const { FactCabAPI } = require('./routes/factcab.routes');
 const { FactDetAPI } = require('./routes/factdet.routes');
 const app = express();
-//const router = express.Router(); // correccion de bug
 
 // Crea y conecta la BD segun lo determinado en config/db.js
 sequelize.sync().then(() => console.log("Created and connected successfully"));
+
+// IMPORTANTE: uso de CORS
+app.use(cors);
 
 // FUNDAMENTAL: uso del Express
 app.use(express.json());

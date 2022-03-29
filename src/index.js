@@ -21,8 +21,14 @@ const app = express();
 sequelize.sync().then(() => console.log("Created and connected successfully"));
 
 // IMPORTANTE: uso de CORS
-/* app.use(cors);
-app.use((req, res, next) => {
+const corsOptions = {
+    origin: '*',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 200,
+  }
+app.use(cors(corsOptions));
+/* app.use((req, res, next) => {
     res.set("Access-Control-Allow-Credentials", "true");
     res.set("Access-Control-Allow-Origin", "https://sist-restaurante-backend.herokuapp.com/");
     res.set("Access-Control-Allow-Headers", "Content-Type");

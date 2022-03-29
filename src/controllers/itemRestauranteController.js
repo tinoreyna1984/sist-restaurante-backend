@@ -8,7 +8,6 @@ module.exports = {
       let items = await ItemRestaurante.findAll();
       //res.status(200).send("Menu items: " + JSON.stringify(items, null, 2));
       res.json(items);
-      console.log(items);
       console.debug("Menu items: " + JSON.stringify(items, null, 2));
     } catch (error) {
       console.error(error);
@@ -52,7 +51,6 @@ module.exports = {
           .status(200)
           .send(`Item with ID ${id} found: ${JSON.stringify(item, null, 2)}`); */
         res.json(item);
-        console.log(items);
         console.debug(
           `Item with ID ${id} found: ${JSON.stringify(item, null, 2)}`
         );

@@ -6,7 +6,8 @@ module.exports = {
     getAll: async (req, res) => {
         try {
           let waiters = await Mesero.findAll();
-          res.status(200).send("Waiters: " + JSON.stringify(waiters, null, 2));
+          //res.status(200).send("Waiters: " + JSON.stringify(waiters, null, 2));
+          res.json(waiters);
           console.debug("Waiters: " + JSON.stringify(waiters, null, 2));
         } catch (error) {
           console.error(error);
@@ -39,18 +40,19 @@ module.exports = {
           const {
             params: { id },
           } = req;
-          let waiters = await Mesero.findOne(
+          let waiter = await Mesero.findOne(
             { where: { id: id } },
             { raw: true }
           );
-          if (waiters === null) {
+          if (waiter === null) {
             return res.status(400).send("Bad request - Not found");
           } else {
-            res
+            /* res
               .status(200)
-              .send(`Waiter with ID ${id} found: ${JSON.stringify(waiters, null, 2)}`);
+              .send(`Waiter with ID ${id} found: ${JSON.stringify(waiter, null, 2)}`); */
+            res.json(waiter);
             console.debug(
-              `Waiter with ID ${id} found: ${JSON.stringify(waiters, null, 2)}`
+              `Waiter with ID ${id} found: ${JSON.stringify(waiter, null, 2)}`
             );
           }
         } catch (error) {

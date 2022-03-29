@@ -6,7 +6,8 @@ module.exports = {
     getAll: async (req, res) => {
         try {
           let tables = await Mesa.findAll();
-          res.status(200).send("Tables: " + JSON.stringify(tables, null, 2));
+          //res.status(200).send("Tables: " + JSON.stringify(tables, null, 2));
+          res.json(tables);
           console.debug("Tables: " + JSON.stringify(tables, null, 2));
         } catch (error) {
           console.error(error);
@@ -46,9 +47,10 @@ module.exports = {
           if (table === null) {
             return res.status(400).send("Bad request - Not found");
           } else {
-            res
+            /* res
               .status(200)
-              .send(`Table with ID ${id} found: ${JSON.stringify(table, null, 2)}`);
+              .send(`Table with ID ${id} found: ${JSON.stringify(table, null, 2)}`); */
+            res.json(table);
             console.debug(
               `Table with ID ${id} found: ${JSON.stringify(table, null, 2)}`
             );

@@ -6,7 +6,8 @@ module.exports = {
     getAll: async (req, res) => {
         try {
           let invDetails = await FacturaDet.findAll();
-          res.status(200).send("Invoice details: " + JSON.stringify(invDetails, null, 2));
+          //res.status(200).send("Invoice details: " + JSON.stringify(invDetails, null, 2));
+          res.json(invDetails);
           console.debug("Invoice details: " + JSON.stringify(invDetails, null, 2));
         } catch (error) {
           console.error(error);
@@ -46,9 +47,10 @@ module.exports = {
           if (invDetails === null) {
             return res.status(400).send("Bad request - Not found");
           } else {
-            res
+            /* res
               .status(200)
-              .send(`Invoice detail with ID ${id} found: ${JSON.stringify(invDetails, null, 2)}`);
+              .send(`Invoice detail with ID ${id} found: ${JSON.stringify(invDetails, null, 2)}`); */
+            res.json(invDetails);
             console.debug(
               `Invoice detail with ID ${id} found: ${JSON.stringify(invDetails, null, 2)}`
             );

@@ -6,7 +6,8 @@ module.exports = {
     getAll: async (req, res) => {
         try {
           let menus = await Menu.findAll();
-          res.status(200).send("Menus: " + JSON.stringify(menus, null, 2));
+          //res.status(200).send("Menus: " + JSON.stringify(menus, null, 2));
+          res.json(menus);
           console.debug("Menus: " + JSON.stringify(menus, null, 2));
         } catch (error) {
           console.error(error);
@@ -46,9 +47,10 @@ module.exports = {
           if (menu === null) {
             return res.status(400).send("Bad request - Not found");
           } else {
-            res
+            /* res
               .status(200)
-              .send(`Menu with ID ${id} found: ${JSON.stringify(menu, null, 2)}`);
+              .send(`Menu with ID ${id} found: ${JSON.stringify(menu, null, 2)}`); */
+              res.json(menu);
             console.debug(
               `Menu with ID ${id} found: ${JSON.stringify(menu, null, 2)}`
             );

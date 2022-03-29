@@ -6,7 +6,8 @@ module.exports = {
     getAll: async (req, res) => {
         try {
           let users = await Usuarios.findAll();
-          res.status(200).send("Users: " + JSON.stringify(users, null, 2));
+          //res.status(200).send("Users: " + JSON.stringify(users, null, 2));
+          res.json(users);
           console.debug("Users: " + JSON.stringify(users, null, 2));
         } catch (error) {
           console.error(error);
@@ -46,9 +47,10 @@ module.exports = {
           if (item === null) {
             return res.status(400).send("Bad request - Not found");
           } else {
-            res
+            /* res
               .status(200)
-              .send(`User with ID ${id} found: ${JSON.stringify(item, null, 2)}`);
+              .send(`User with ID ${id} found: ${JSON.stringify(item, null, 2)}`); */
+            res.json(item);
             console.debug(
               `User with ID ${id} found: ${JSON.stringify(item, null, 2)}`
             );

@@ -47,9 +47,10 @@ module.exports = {
       if (item === null) {
         return res.status(400).send("Bad request - Not found");
       } else {
-        res
+        /* res
           .status(200)
-          .send(`Item with ID ${id} found: ${JSON.stringify(item, null, 2)}`);
+          .send(`Item with ID ${id} found: ${JSON.stringify(item, null, 2)}`); */
+        res.json(item);
         console.debug(
           `Item with ID ${id} found: ${JSON.stringify(item, null, 2)}`
         );

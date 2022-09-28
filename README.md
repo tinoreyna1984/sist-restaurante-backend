@@ -9,7 +9,7 @@ Tecnologías empleadas (las versiones están en package.json):
 - Sequelize.
 - SQLite.
 
-Enlace del API: https://sist-restaurante-backend.herokuapp.com
+Enlace del API: https://sist-restaurante-backend.onrender.com/
 
 Operaciones:
 
